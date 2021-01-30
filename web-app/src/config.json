@@ -1,0 +1,11 @@
+{
+  "version": "0.1.1",
+  "development": "http://localhost:7100",
+  "production": "https://api.coinlen.com",
+  "WSpath": {
+    "development": "http://127.0.0.1:2020",
+    "production": "https://ws.coinlen.com"
+  },
+  "WSPrefixServer": "/c4",
+  "WSServerPath": "/coinlen.socket"
+}

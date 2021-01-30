@@ -1,0 +1,4 @@
+{
+  "development": "http://localhost:7100",
+  "production": "https://api.coinlen.com"
+}

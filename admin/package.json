@@ -1,0 +1,66 @@
+{
+  "name": "coin",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@date-io/date-fns": "1.x",
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@material-ui/pickers": "^3.2.10",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "bson": "^4.0.4",
+    "buffer": "^5.6.0",
+    "date-fns": "^2.15.0",
+    "formik": "^2.1.4",
+    "formik-material-ui": "^2.0.0-beta.1",
+    "formik-material-ui-pickers": "^0.0.10",
+    "lodash": "^4.17.15",
+    "moment": "^2.27.0",
+    "moment-timezone": "^0.5.31",
+    "numeral": "^2.0.6",
+    "prop-types": "^15.7.2",
+    "querystring": "^0.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-moment": "^0.9.7",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "recharts": "^1.8.5",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "throttle-debounce": "^2.2.1",
+    "yup": "^0.29.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-react": "^7.20.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

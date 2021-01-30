@@ -1,0 +1,1502 @@
+{
+	"info": {
+		"_postman_id": "XXXX",
+		"name": "Coinlen Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth/email-activation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "123",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/email-activation",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"email-activation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth/check",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "XXXX",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/check",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth/pre-register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin1@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Osman Yilmaz",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/pre-register",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"pre-register"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "coin",
+					"item": [
+						{
+							"name": "api/coin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/coin/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"coin",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/coin/format",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/coin/format",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"coin",
+										"format"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/coin/history/:coin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/coin/history/BTC",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"coin",
+										"history",
+										"BTC"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/coin/opportunity",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/coin/opportunity",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"coin",
+										"opportunity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/coin/sync-db",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/coin/sync-db",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"coin",
+										"sync-db"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/coin/initialize-db",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/coin/initialize-db",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"coin",
+										"initialize-db"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "notification",
+					"item": [
+						{
+							"name": "api/notification/latest",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/notification/latest",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"notification",
+										"latest"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/notification",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "page",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/notification/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"notification",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/notification/show/:id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/notification/show/:id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"notification",
+										"show",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "42dec734-b308-471f-84b9-9468e488f986"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "api/user/update-account",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "admin123@admin.com",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Name Surname",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "1234567890",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/user/update-account",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update-account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/user/update-password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "currentPassword",
+											"value": "123",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "passwordConfirm",
+											"value": "1234",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/user/update-password",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"update-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/user/catch-errors-log-and-report-it",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "time",
+											"value": "1597884822094",
+											"type": "text"
+										},
+										{
+											"key": "error",
+											"value": "Error: Invariant failed: You should not use <Link> outside a <Router>",
+											"type": "text"
+										},
+										{
+											"key": "errorInfo",
+											"value": "in Link (at Nav.jsx:48)\\\\n    in Nav (at Header.jsx:39)\\\\n    in App (at src/index.js:11)",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/user/catch-errors-log-and-report-it",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"catch-errors-log-and-report-it"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "payment",
+					"item": [
+						{
+							"name": "api/payment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/payment",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/payment/do",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/payment/do",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"payment",
+										"do"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "coinbase-payment-gateway/webhook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "attempt_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "event",
+									"value": "{\"created_at\":\"2018-02-16T08:50:20Z\",\"data\":{\"id\":\"xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\",\"name\":\"Test\",\"status\":\"NEW\",\"pricing\":{\"BCH\":{\"price\":{\"amount\":\"0.00023605\",\"currency\":\"BCH\"},\"exchange_rate\":\"1059.110421625297517851071064264\"},\"BTC\":{\"price\":{\"amount\":\"0.00003552\",\"currency\":\"BTC\"},\"exchange_rate\":\"7038.772951377082624957497449847\"},\"ETH\":{\"price\":{\"amount\":\"0.000381000\",\"currency\":\"ETH\"},\"exchange_rate\":\"655.577042955910687974611810042\"},\"LTC\":{\"price\":{\"amount\":\"0.00163393\",\"currency\":\"LTC\"},\"exchange_rate\":\"153.005638671653632551286410518\"}},\"product\":{\"id\":\"xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\",\"resource\":\"product\",\"resource_path\":\"/products/xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\"},\"donation\":false,\"logo_url\":\"https://res.cloudinary.com/commerce/image/upload/v1518701466/uhfjucbumndwylffc0qc.png\",\"metadata\":{\"name\":\"Jimmy\",\"email\":\"test@test.com\"},\"resource\":\"charge\",\"created_at\":\"2018-02-16T08:50:20Z\",\"expires_at\":\"2018-02-16T09:05:20Z\",\"order_code\":\"ABCDEG123\",\"description\":\"test\",\"local_price\":{\"amount\":\"0.25\",\"currency\":\"GBP\"},\"confirmed_at\":null,\"failure_body\":null,\"failure_title\":null,\"resource_path\":\"/charges/xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\",\"failure_reason\":null,\"payment_receivers\":[{\"id\":\"xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\",\"address\":\"0x12343526789547896548965\",\"currency\":\"ETH\",\"payments\":[]},{\"id\":\"xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\",\"address\":\"1212jh21gb3jh1g2j1g2jh1gj12hg1j2\",\"currency\":\"BTC\",\"payments\":[]},{\"id\":\"xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\",\"address\":\"asmdnasdasjkdhkajshdakjshdkashdakjshdaks\",\"currency\":\"BCH\",\"payments\":[]},{\"id\":\"xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\",\"address\":\"asdlkajsldkjasldjalsdkjalsdjalk\",\"currency\":\"LTC\",\"payments\":[]}],\"shopify_redirect_url\":null,\"third_party_provider\":null,\"primary_payment_value\":null,\"local_primary_payment_value\":null},\"id\":\"xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\",\"resource\":\"event\",\"resource_path\":\"/events/xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\",\"type\":\"charge:created\"}",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+									"type": "text"
+								},
+								{
+									"key": "resource",
+									"value": "webhook-delivery",
+									"type": "text"
+								},
+								{
+									"key": "resource_path",
+									"value": "/webhook-deliveries/xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+									"type": "text"
+								},
+								{
+									"key": "scheduled_for",
+									"value": "2018-02-16T08:55:04Z",
+									"type": "text"
+								},
+								{
+									"key": "webhook_subscriber",
+									"value": "{\"id\":\"xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\",\"resource\":\"webhook-subscriber\",\"resource_path\":\"/webhook-subscribers/xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\"}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/coinbase-payment-gateway/webhook-event/payment",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"coinbase-payment-gateway",
+								"webhook-event",
+								"aqwertyuiipasdfghjjlzxczxcvvbnm"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyXXXXX",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8280d0f1-3164-4d23-92c6-187fcb31fa44",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "85bf4065-6e7f-4b0d-bbef-3c35210eb718",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "super",
+			"item": [
+				{
+					"name": "coins",
+					"item": [
+						{
+							"name": "super/coin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/admin/coin/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"coin",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin\coin/create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "New  Bitcoin",
+											"type": "text"
+										},
+										{
+											"key": "coin",
+											"value": "NBTC3",
+											"type": "text"
+										},
+										{
+											"key": "position",
+											"value": "103",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/admin/coin/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"coin",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/coin/edit/:id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "New  Bitcoin",
+											"type": "text"
+										},
+										{
+											"key": "coin",
+											"value": "NBTC2",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "position",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/admin/coin/edit/1fef8018-1b68-462e-b9b6-70c47cfee15e",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"coin",
+										"edit",
+										"1fef8018-1b68-462e-b9b6-70c47cfee15e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/coin/show/:id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/admin/coin/show/1fef8018-1b68-462e-b9b6-70c47cfee15e",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"coin",
+										"show",
+										"1fef8018-1b68-462e-b9b6-70c47cfee15e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/coin/delete/:id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/admin/coin/delete/1fef8018-1b68-462e-b9b6-70c47cfee15e",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"coin",
+										"delete",
+										"1fef8018-1b68-462e-b9b6-70c47cfee15e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/coin/sync",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/admin/coin/sync",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"coin",
+										"sync"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "coins.format",
+					"item": [
+						{
+							"name": "admin/coin/format",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/admin/coin/format",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"coin",
+										"format"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/coin/format/create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "New  Bitcoin",
+											"type": "text"
+										},
+										{
+											"key": "coin",
+											"value": "NBTC0",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "position",
+											"value": "103",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/admin/coin/format/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"coin",
+										"format",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/coin/format/edit/:id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "New  Bitcoin",
+											"type": "text"
+										},
+										{
+											"key": "coin",
+											"value": "NBTC",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "12",
+											"type": "text"
+										},
+										{
+											"key": "position",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/admin/coin/format/edit/61cf4c55-ed3e-48d8-a1b4-fd6a32d4cd79",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"coin",
+										"format",
+										"edit",
+										"61cf4c55-ed3e-48d8-a1b4-fd6a32d4cd79"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/coin/format/show/:id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/admin/coin/format/show/61cf4c55-ed3e-48d8-a1b4-fd6a32d4cd79",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"coin",
+										"format",
+										"show",
+										"61cf4c55-ed3e-48d8-a1b4-fd6a32d4cd79"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/coin/format/delete/:id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/admin/coin/format/delete/61cf4c55-ed3e-48d8-a1b4-fd6a32d4cd79",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"coin",
+										"format",
+										"delete",
+										"61cf4c55-ed3e-48d8-a1b4-fd6a32d4cd79"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "admin/user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/admin/user",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/user/restart-system",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/admin/user/restart-system",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"user",
+										"restart-system"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/user/create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Sakir Cembo",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "sakir@cembo.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "sakir",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/admin/user/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"user",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/user/edit/:id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Sakir Cembo",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "sakir2@cembo.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "sakir",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/admin/user/edit/5ef55435e24201b3ae01b17c",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"user",
+										"edit",
+										"5ef55435e24201b3ae01b17c"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/user/delete/:id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/admin/user/delete/5ef55a6d7d26d7b649c1eb59",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"user",
+										"delete",
+										"5ef55a6d7d26d7b649c1eb59"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "notification",
+					"item": [
+						{
+							"name": "admin/notification",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/admin/notification/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"notification",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/notification/show/:id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/notification/show/:id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"notification",
+										"show",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "42dec734-b308-471f-84b9-9468e488f986"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "currency",
+					"item": [
+						{
+							"name": "api/currency/show",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/currency/show",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"currency",
+										"show"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/currency/update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "currency",
+											"value": "6.85147",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/currency/update",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"currency",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "payment",
+					"item": [
+						{
+							"name": "admin/payment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/admin/payment",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"payment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/payment/show/:id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/admin/payment/show/:id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"payment",
+										"show",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "test"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "log",
+					"item": [
+						{
+							"name": "admin/log",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/admin/log",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"log"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/log/show/:id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/admin/log/show/:id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"log",
+										"show",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5f34c39ea3b56b1bcb5fc436"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin/log/delete/:id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/admin/log/delete/:id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"super",
+										"log",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5f34c124a3b56b1bcb5fc434"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "admin/dashboard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/admin/dashboard/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"super",
+								"dashboard",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJXXXX",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b7eb199d-1f5b-421f-91dc-29e7811ad2df",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "9d93fd78-55d4-4780-92ec-f2c5b6477c6c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "home",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/error",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"error"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "telegram",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.telegram.org/botXXXXX/getUpdates",
+					"protocol": "https",
+					"host": [
+						"api",
+						"telegram",
+						"org"
+					],
+					"path": [
+						"xxx:XXX-xxx",
+						"getUpdates"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2f172e99-e629-4bf7-b20d-b103acd5da19",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0e93694d-0930-443a-8a2f-847af979d52b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b4cd7a01-0101-436f-90f8-3bca2f50b061",
+			"key": "BASE_URL",
+			"value": "http://localhost:7100"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

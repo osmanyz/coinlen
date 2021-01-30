@@ -1,0 +1,4 @@
+# Every 1 hour system will restart it for pm2 process
+0 * * * * pm2 restart provider-binance
+0 * * * * pm2 restart provider-paribu
+0 * * * * pm2 restart provider-btcturk

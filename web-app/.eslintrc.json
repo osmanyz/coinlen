@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "@blueprintjs/eslint-config",
+    "plugin:@blueprintjs/recommended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@blueprintjs/blueprint"],
+  "rules": {
+    "@blueprintjs/classes-constants": ["error"],
+    "@blueprintjs/html-components": ["error"],
+    "jsx-quotes": [2, "prefer-double"]
+  }
+}
